@@ -6,7 +6,7 @@
 int b[R] = {0, };
 int cnt = 0;
 
-void PrintRePer(){
+void PrintPer(){
 	int i;
 	
 	for(i = 0; i < R; i++){
@@ -22,10 +22,10 @@ void Swap(int *a, int *b){
   *b = temp;
 }
 
-void Repermutation(int a[], int n, int r){
+void Permutation(int a[], int n, int r){
 	int i;
 	
-	if(r>=R) PrintRePer();
+	if(r>=R) PrintPer();
 	else for(i=0; i<n; i++){
 		Swap(a+r, a+i);
     b[r] = a[r];
@@ -38,7 +38,7 @@ int main(void){
 	int a[] = {1, 2, 3, 4, 5, 6};
 	int n = sizeof(a)/sizeof(int);
 	
-	RePermutation(a, n-1, 0);
+	Permutation(a, n-1, 0);
 	printf("순열 개수 : %d\n", cnt);
 	
 	return 0;
